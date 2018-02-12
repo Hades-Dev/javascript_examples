@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Examples & Tutorials </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+<style>
+
+#goup{
+    position: fixed;
+    right: 10px;
+    bottom:30px;
+    cursor:pointer;
+    display: none;
+}
+#goup:hover{
+color:#2e6da4;
+}
+    .coun_dwn{
+        font-size: 45px;
+        font-family: 'Baumans', cursive;
+        color: #0A202F;
+    }
+    .coun_dwn:before{
+        content: 'Count Down Timer : ';
+    }
+</style>
+</head>
+<body>
+
+
+
+<div class="lead text-danger ">
+
+    <noscript>
+        <!-- Detect if JavaScript enabled or not on client browser ^^ -->
+        <style type="text/css">
+            .pagecontainer {display:none;}
+            .noscriptmsg{position: fixed;text-align: center;background-color: #DDD;z-index: 99;width: 100%;top:0}
+        </style>
+        <div class="noscriptmsg">
+            Warning ! Javascript detected is <strong>Disabled</strong> You have to enable it to have more features
+        </div>
+        <!--Done by Mr.Hades :) -->
+    </noscript>
+
+</div>
+
+
+
+<div class="container text-center">
+
+    <h3 class="text-info lead"><i class="fa fa-code"></i> Elzero Web School Developers  </h3>
+    <h2>JavaScript Examples & Tutorials Coded By  <a href="index.html"> Mr.Hades</a><h2><hr>
+    <div class="row">
+
+            <div class="col-lg-12 ">
+                <div class="panel panel-primary text-left">
+                    <div class="panel-heading"><span> #1: Lesson 2 hide placeholder and auto type</span></div>
+                        <div class="panel-body">
+                          <form>
+                              <input type="text" id="input_txt" placeholder="Type your name " class="text text-info text-center" onkeyup="autoType()" onfocus="hidePlaceholder()">
+
+                              <label id="run_code" class="label label-info text-center"></label><br><br>
+                          </form>
+                        </div>
+
+
+
+                    <div class="panel-heading"><span> #2: Lesson 3 Nice auto writer </span></div>
+                    <div class="panel-body">
+
+                <button class="btn btn-warning" onclick="typeWriter()" ><i class="fa fa-play-circle "></i> Run</button>
+                        <button class="btn btn-info" onclick="typeWriter2()"><i class="fa fa-play-circle "></i> Run Yours</button>
+
+                        <textarea type="text" id="txt_w" class="text text-danger btn-sm" placeholder="Type your logo here" ></textarea> <hr>
+
+                        <p id="type" class="lead text-center"></p>
+                        <p id="type2" class="lead text-center"></p>
+
+                    </div>
+
+
+
+                    <div class="panel-heading"><span> #3: Lesson 4 Hide/Show password Field </span></div>
+                    <div class="panel-body">
+
+                        <input type="password" id="psw" placeholder="type a password" ><button class="fa fa-eye fa-1x btn btn-info btn-xs" id="show_psw" style="cursor: pointer">Show</button>
+                    </div>
+
+
+                    <div class="panel-heading"><span> #4: Lesson 9 characters counter   </span></div>
+                    <div class="panel-body">
+<textarea id="txt_area" class="text text-info btn-lg" placeholder="type here..." style="width: 850px;height: 200px" onkeyup="counterChar()"></textarea>
+                        <i class="fa fa-comment text-info" id="count"> 00 of 150</i>
+                    </div>
+
+
+
+                    <div class="panel-heading"><span> #5: Lesson 14 CountDown Timer   </span></div>
+                    <div class="panel-body text-center">
+                        <div class="coun_dwn" id="timer_donwn"></div>
+
+                    </div>
+
+
+                    <div class="panel-heading"><span> #6: Lesson 15 Generator Number  </span></div>
+                    <div class="panel-body">
+                        <button id="generate" class="btn btn-info" onclick="generateSerial()">Generate Serial </button>
+                        <span id="gen_num" class="text text-danger btn-lg"></span>
+                        <span id="serial_length" class="label label-success"></span>
+                    </div>
+                    <a href="index.html" class="btn btn-link btn-lg" target="_blank">Show JS course Practice </a>
+                    <a href="source_code/Js_practice.rar" class="btn btn-success" title="Press here to download the source code "><i class="fa fa-download "></i> Download Source Code</a>
+                </div>
+              </div>
+            </div>
+    </div>
+</div>
+
+<i class="fa fa-arrow-circle-up fa-3x text-danger" id="goup"></i>
+
+
+<footer class="panel-footer text-center">
+
+    <strong>Made with <i class="fa fa-heart fa-lg" style="color: #9d261d"></i> by Mr.Hades.Inc</strong>
+    <div id="show_date" class="text-info text-left"></div>
+</footer>
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<script src="js/js_examples.js"></script>
+
+</body>
+</html>

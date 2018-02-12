@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> JavaScript Course Examples </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/mine.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="lead text-danger ">
+
+    <noscript>
+        <!-- Detect if JavaScript enabled or not on client browser ^^ -->
+        <style type="text/css">
+            .pagecontainer {display:none;}
+            .noscriptmsg{position: fixed;text-align: center;background-color: #DDD;z-index: 99;width: 100%;top:0}
+        </style>
+        <div class="noscriptmsg">
+            Warning ! Javascript detected is <strong>Disabled</strong> You have to enable it to have more features
+        </div>
+        <!--Done by Mr.Hades :) -->
+    </noscript>
+
+</div>
+<section class="container text-center">
+
+
+
+    <MARQUEE class="panel panel-info btn-block">
+        <div  class="panel-heading btn-lg text-center" >Hi,Developers. I'm a new web developer.i would like to share with you my first simple app by using
+            <strong>Future Language</strong> JavaScript :)
+        </div>
+    </MARQUEE>
+
+
+    <div class="row">
+
+        <h3 class="text-info lead"><i class="fa fa-code"></i> Elzero Web School Developers  </h3>
+        <h2> Examples Of JavaScript Course <a href="index.html">By Mr.Hades</a><h2><hr>
+
+        <h3 class="text-left"> 1: Age calculator with JS  ||Your Birthday :
+            <input id="year" type="number" placeholder="2018" style="width: 80px;" minlength="2" onblur="testing();">
+            <input id="month" type="number" placeholder="12" style="width: 50px" onblur="testing();">
+            <input id="day" type="number" placeholder="31" style="width: 50px" onblur="testing();">
+
+        </h3>
+            <div class="col-lg-6 ">
+                <div class="panel panel-info">
+                    <div class="panel-heading">User age Information</div>
+                        <div class="panel-body">
+                            <p id="p1" class="lead text-justify"> </p>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">User Permission message</div>
+                        <div class="panel-body">
+                          <p id="p2"></p>
+                        </div>
+                </div>
+            </div>
+
+        <div class="col-lg-2 ">
+
+            <a class="btn btn-danger  btn-block" onclick="clearElement();"><i class="fa fa-times"></i> Clear</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="container text-center">
+    <h3 class="text-left"> 2: Discount System with JS</h3>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">Product Data</div>
+                <div class="panel-body">
+
+                    <p id="dis_0" class="lead text-justify"><strong>Iphone X :</strong> 850 $
+                        <input id="dis_val" type="number" placeholder="Ex :15" style="width: 80px" > Get Discount now
+                    </p>
+
+                    <p id="dis_1" class="lead text-justify"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Notifications <i class="badge" id="notes">0</i></div>
+                <div class="panel-body">
+                    <p id="dis_2"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <a class="btn btn-warning btn-block" onclick="discount();">See Discount</a>
+            <a class="btn btn-danger  btn-block" onclick="clearElement2();">Clear</a>
+        </div>
+
+    </div>
+ </section>
+
+
+<section class="container text-center">
+    <h3 class="text-left"> 3: Switch case | seasons Recomendations |  with JS</h3>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">Season Recommendation </div>
+                <div class="panel-body">
+
+                    <p class="lead text-justify">Select your favourite Season :
+                        <select class="text-primary" id="select_val">
+                            <option value="0">Select one</option>
+                            <option value="1">Sprint</option>
+                            <option value="2">Winter</option>
+                            <option value="3">Fall</option>
+                            <option value="4">Summer</option>
+                        </select>
+                    </p>
+
+                    <p id="sw_1" class="lead text-justify"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Notifications <i class="badge" id="sw_2">0</i></div>
+                <div class="panel-body">
+                    <p id="sw_3"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <a class="btn btn-warning btn-block" onclick="swCase();">Recommand me</a>
+            <a class="btn btn-danger  btn-block" onclick="clearElement3();">Clear</a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="container text-center">
+    <h3 class="text-left"> 4: Events | Money Transfer |  with JS</h3>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">Be more faster </div>
+                <div class="panel-body">
+                    <p class="lead text-left"><i class="fa fa-money"></i> Convert From Dollar To Riyal yemeni with my simple code</p>
+                        <select class=" text-center panel panel-heading" id="currency" onchange="moneyConvert()">
+                            <option value="470" class="panel-body text-info"> $ Dollar</option>
+                            <option value="115" class="panel-body text-info"> $ KSA</option>
+                        </select>
+                        <input type="number" id="money" value="" class=" text-info text-center" placeholder="00" onkeyup="moneyConvert()">
+                        <span class="lead" id="result">1 $ equals 460 YR || 1 RS equals 115 YR </span>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<section class="container">
+    <h3 class="text-left"> 5: Arrays methods | Advanced search | with JS</h3>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+
+                <div class="panel-heading text-center" >Easy way learn more... </div>
+                <br>
+                <input type="text"  class="text-primary text-center" id="add"  placeholder="type here">
+             <button  class="btn btn-success btn-sm" onclick="addFirend()">Add Friend</button>
+                <label>Search : </label>
+
+                <input type="search" value="" class="text-primary text-center" id="srch" placeholder="automatic searching" onkeyup="autoSearch()">
+
+               <span>||  Advanced Tool </span>
+
+                <select id="all2" class="text-info text-right" onchange="advanceTool()">
+                    <option value="0">Select one</option>
+                    <option value="1">Show All Friends</option>
+                    <option value="2">Amount of All</option>
+                    <option value="3">Show Best Friends</option>
+                    <option value="4">Hide All</option>
+                </select><hr>
+
+                <div id="all" class="text-center btn-lg text-info">
+                </div>
+          </div> <!-- End of panel heading div -->
+        </div> <!-- End of col div -->
+    </div> <!-- End of row div -->
+</section> <!-- End of Section -->
+
+
+
+<section class="container text-center">
+    <h3 class="text-left"> 6: Advanced For Loop | Years Generator | with JS</h3>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+
+                <div class="panel-heading text-center" >Tyr to be awesome with your codes :)  </div>
+                <br>
+                <label>From </label>
+                <input type="number"  class="text-primary text-center" id="start_val"  placeholder="Start Years 1990 ">
+                <label>To </label>
+                <input type="number"  class="text-primary text-center" id="end_val"  placeholder="End year 2018">
+                <button  class="btn btn-info btn-sm" onclick="generateDates()">Generate Now</button>
+
+                <div id="year_show" class="text-center btn-lg text-info"></div>
+
+            </div> <!-- End of panel heading div -->
+        </div> <!-- End of col div -->
+    </div> <!-- End of row div -->
+</section> <!-- End of Section -->
+
+
+
+
+
+
+<section class="container ">
+    <h3 class="text-left"> 7: Regular Expression  | Auto Input Analysing | with JS</h3>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+
+                <div class="panel-heading text-center" >Type more and I'll guide you to safe way ^^  </div>
+                <br><br>
+                <label>Type Your Full Name </label>
+                <input type="text"  class="text-primary text-center input-lg" id="full_name"  placeholder="Hades Agoma" onblur="name_check()">
+                <label id="full_name_notes"></label>
+                <br><br>
+                <label>Type Your Password </label>
+                <input type="password"  class="text-primary text-center input-lg " id="psw"  placeholder="Done0010**#@" onblur="pswChecker()" onfocus="">
+                <label id="psw_notes"></label>
+                <br><hr>
+
+                <button  class="btn btn-primary btn-lg center-block" onclick="generateDates()">Lemme go :) </button>
+                <button  class="btn btn-warning  " onclick="window.print()">Print Me </button>
+
+                <div id="pass_all" class="text-center btn-lg text-info"></div>
+
+            </div> <!-- End of panel heading div -->
+        </div> <!-- End of col div -->
+    </div> <!-- End of row div -->
+</section> <!-- End of Section -->
+
+
+
+
+<section class="container text-center">
+    <h3 class="text-left"> 8: Numbers Methods  | Auto number convert systems | with JS</h3>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-info">
+
+                <div class="panel-heading " >Be a man and code with no errors at the first RUN :)   </div>
+                <br><br>
+                <input type="number"  class="text-primary text-center " id="numValues"  placeholder="Type a number" onkeyup="numberConv()">
+                <div id="num_show" class="btn-lg text-info text-left"></div>
+
+            </div> <!-- End of panel heading div -->
+            <a href="js_examples.html" class="btn btn-link btn-lg text-left">Show JS Examples Course </a>
+            <a href="source_code/Js_practice.rar" class="btn btn-success" title="Press here to download the source code "><i class="fa fa-download "></i> Download Source Code</a>
+        </div> <!-- End of col div -->
+    </div> <!-- End of row div -->
+</section> <!-- End of Section -->
+
+
+<footer class="panel-footer text-center">
+
+    <strong>Made with <i class="fa fa-heart fa-lg" style="color: #9d261d"></i> by Mr.Hades.Inc</strong>
+    <div id="show_date" class="text-info text-left"></div>
+</footer>
+
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+</body>
+</html>
